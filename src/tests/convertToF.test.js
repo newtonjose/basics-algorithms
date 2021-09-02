@@ -7,6 +7,7 @@ test("convertToF", () => {
 });
 
 test("reverseString", () => {
+//   execpt(factorializ(5)
   expect(reverseString("hello")).toBe("olleh");
   expect(reverseString("Howdy")).toBe("ydwoH");
   expect(reverseString("Greetings from Earth")).toBe("htraE morf sgniteerG");

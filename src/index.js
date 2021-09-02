@@ -21,7 +21,26 @@ const reverseStringRecursion = (str) => {
   else return reverseStringRecursion(str.substr(1)) + str.charAt(0);
 };
 
+// 5 -> 1*5 => 5*4 => 20*3 => 60*2 => 120*1  
+const factorialize = (num) => {
+  let factorial = 1;
+
+  for (let i = num; i >= 1; i--) {
+    factorial *= i;
+  }
+
+  return factorial;
+};
+
+const factorializeRecursion = (num) => {
+    // caso base
+    if (num == 1)
+        return num;
+    
+    return factorializeRecursion(num - 1) * num;
+}
+
+console.log(factorializeRecursion(5));
 console.log(reverseStringRecursion("hello"));
 
-
-export { convertToF, reverseString };
+export { convertToF, reverseString, factorialize };
